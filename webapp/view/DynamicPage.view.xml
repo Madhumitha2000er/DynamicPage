@@ -1,0 +1,88 @@
+<mvc:View controllerName="ns.dynamicpagedemo.controller.DynamicPage"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f = "sap.f"
+    xmlns:l ="sap.ui.layout"
+>
+    <f:DynamicPage id="idDynamicPage" headerExpanded="true" toggleHeaderOnTitleClick="true">
+
+    <f:title>
+        <f:DynamicPageTitle id="idDynamicPageTitle" >
+            <f:heading>
+                <Title id="idTitle" text="DemoTitleOne"></Title>
+            </f:heading>
+
+            <f:breadcrumbs>
+             <Breadcrumbs id="idBreadCrumbs" >
+               <Link text="Home"></Link>
+				<Link text="Page 1" />
+				<Link text="Page 2" />
+				<Link text="Page 3" />
+				<Link text="Page 4" />
+				<Link text="Page 5" />
+             </Breadcrumbs>
+            </f:breadcrumbs>
+
+            <f:expandedContent>
+               	<Label text="This is a subheading in expandedContent"/>
+            </f:expandedContent>
+
+            <f:snappedContent>
+                <Label text="This is a subheading in snappedContent"/>
+            </f:snappedContent>
+
+            <f:snappedTitleOnMobile>
+				<Title text="This is a subheading in snappedTitleOnMobile"/>
+			</f:snappedTitleOnMobile>
+
+
+            <f:actions>
+               <Button text="Edit" type="Emphasized"></Button>
+                <Button text="Delete" type="Accept" ></Button>
+                <Button text="Copy" type="Success"></Button>
+            </f:actions>
+
+        </f:DynamicPageTitle>
+
+    </f:title>  
+
+   <f:header>
+      <f:DynamicPageHeader pinnable="true">
+          
+        
+         <l:HorizontalLayout allowWrapping="true" >
+
+           <l:VerticalLayout  class="sapUiMediumMarginEnd" >
+               <ObjectAttribute title="Location" text="Warehouse A"></ObjectAttribute>
+               <ObjectAttribute title="Halway" text="23L"/>
+			   <ObjectAttribute title="Rack" text="34"/>
+           </l:VerticalLayout>
+
+           	<l:VerticalLayout>
+				<ObjectAttribute title="Availability"/>
+				<ObjectStatus text="In Stock" state="Success" />
+			</l:VerticalLayout>
+             
+         
+         </l:HorizontalLayout>
+      </f:DynamicPageHeader>
+      
+
+
+   </f:header> 
+
+
+   <f:footer>
+   <OverflowToolbar >
+   <Button text="Accept" type="Accept"></Button>
+   <Button text="Reject" type="Reject"></Button>
+   
+   </OverflowToolbar>
+   </f:footer>
+
+ 
+
+
+
+    </f:DynamicPage>
+</mvc:View>
